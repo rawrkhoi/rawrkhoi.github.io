@@ -1,0 +1,107 @@
+<!DOCTYPE htmml>
+<html>
+    <head>
+        <title>Welcome to the Thunderdome!</title>
+                <style>
+            body {
+                background: rgb(132, 214, 134);
+                color: rgb(36, 114, 89);
+                padding: 10px;
+                font-family: arial;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            [id=all-contents] {
+                max-width: 800px;
+                margin: auto;
+            }
+    
+            /* navigation menu */
+            nav {
+                background: rgb(255, 255, 255);
+                margin: 20px;
+                display: flex;
+                padding: 10px;
+                border-radius: 30px;
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(36, 114, 89);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #4b8e8e;
+            }
+    
+            /* main container area beneath menu */
+            main {
+                background: rgb(255, 255, 255);
+                display: flex;
+            }
+            [class=sidebar] {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            [class=sidebar] img {
+                width: 200px;
+            }
+            [class=content] {
+                flex: 1;
+                padding: 15px;
+            }
+            [class=interests] header {
+                font-size: 1.25em;
+            }
+            img {
+                padding: 1px;
+                border: 1px solid #7f8481;
+                background-color: #c1c9c5;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="all-contents">
+            <nav>
+                <header>Khoi's Immaculate Thunderdome</header>
+                <ul>
+                    <li><a href="index.html">Home Screen</a></li>
+                    <li><a href="portfolio.html">Character Select</a></li>
+                </ul>
+            </nav>
+            
+            <main>
+                <div class="sidebar">
+                    <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/35062823_10217263916294031_1572748149699641344_o.jpg?_nc_cat=0&oh=8398276c7c4c1e6da28bd886ac392e47&oe=5BA0A7FF">
+                </div>
+                
+                <div class="content">
+                    <header>
+                        Joshua Nguyen
+                        <p>Team Lead Export Coordinator</p>
+                        <section class="interests">
+                            <header>Interests</header>
+                            <ul>
+                                <li>Eat</li>
+                                <li>Sleep</li>
+                                <li>Code</li>
+                                <li>Repeat</li>
+                            </ul>
+                        </section>
+                    </header>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
