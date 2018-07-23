@@ -22,13 +22,13 @@
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
     
-    var myArr = input.split('');
-    for (var i = myArr[myArr.length - 1]; i > 0; i--) {
-        var reverse = myArr[i]
+    var backwards = '';
+    for (var i = input.length - 1; i >= 0; i--) {
+      backwards = backwards + input[i];
     }
     
-    return reverse.join();
-    
+    return backwards;
+
     // YOUR CODE GOES ABOVE HERE //
 }
 

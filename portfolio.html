@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>The Danger Zone</title>
-                <style type="text/css">
+        <style>
             body {
                 background: rgb(132, 214, 134);
                 color: rgb(36, 114, 89);
@@ -81,13 +81,13 @@
     </head>
     
     <body>
+    <div id="all-contents">
         <nav>
             <header>The Danger Zone</header>
             <ul>
-                <li><a href="index.html">Home</a>
-                </li>
-                <li><a href="portfolio.html">Portfolio</a>
-                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="studies.html">Studies</a></li>
             </ul>
         </nav>
         <main>
@@ -98,9 +98,9 @@
                 </ul>
             </div>
         </main>
-        <div id="all-contents">
+
             
-        </div>
+    </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li><a href="projects/' + project.name + '/">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
     </body>

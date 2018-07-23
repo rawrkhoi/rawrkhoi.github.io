@@ -36,7 +36,15 @@
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
     
-    
+    if ((hour >= 0) && (hour <= 11)) {
+        console.log('Good Morning!');
+    } else if (hour < 17){
+        console.log('Good Afternoon!');
+    } else if (hour < 22){
+        console.log('Good Evening!');
+    } else {
+        console.log('Good Night!');
+    }
     
     
     // YOUR CODE ABOVE HERE //
