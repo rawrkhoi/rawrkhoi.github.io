@@ -85,8 +85,8 @@ function makeContactList() {
             }
             return names;
         },
-        };
-    }
+    };
+}
 
 
 
