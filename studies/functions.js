@@ -43,3 +43,41 @@
     // Output is reference error as var message is never declared or hoisted into global scope.
     // It is only within the function 
     
+ // Closures
+    /* A closure is an inner function that has access to the outer function’s variables—scope chain.
+     * You create a closure by adding a function inside another function.
+     * The closure has three scope chains:
+     *  - it has access to its own scope (variables defined between its curly brackets)
+     *  - it has access to the outer function’s variables
+     *  - it has access to the global variables
+     * The inner function has access to the outer function’s variables and the outer function’s parameters.
+     * The inner function cannot call the outer function’s arguments, however, it can call the outer function’s parameters directly.
+     */
+    
+    // Closures have access to the outer function’s variable
+        /* The inner function still has access to the outer function’s variables even after the outer function has returned.
+         * When functions in JavaScript execute, they use the same scope chain that was in effect when they were created.
+         * This means that even after the outer function has returned, the inner function still has access to the outer function’s variables.
+         * Therefore, you can call the inner function later in your program.
+         */
+         
+        function theName (firstName) {
+            var nameIntro = "This person is ";
+            // this inner function has access to the outer function's variables, including the parameter
+            function lastName (theLastName) {
+                return nameIntro + firstName + " " + theLastName;
+            }
+            return lastName;
+        }
+
+        var myName = theName("Josh"); // Here, the theName outer function has returned.
+        // The closure (lastName) is called here after the outer function has returned above
+        // The closure still has access to the outer function's variables and parameter
+        console.log(myName ("Nguyen")); // Logs, "This person is Josh Nguyen"
+
+    // Closures store references to the outer function’s variables not the actual value.
+    
+    // Closure Quirks
+        /* Because closures have access to the updated values of the outer function’s variables
+         * They can also lead to bugs when the outer function’s variable changes with a for loop
+         */

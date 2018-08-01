@@ -6,7 +6,9 @@
  - open up `test-master.js` in your c9 and have a look.
 
 ## Step 2 - Be The Test Master
-`test-master.js` contains a bunch of **unit tests**. **Unit tests** help us verify that our code is doing the right thing by calling our functions with some test data and making sure that our functions do the right thing. These tests are incomplete and it is our job today to complete them.
+`test-master.js` contains a bunch of **unit tests**. **Unit tests** help us verify that our code is doing the right thing
+by calling our functions with some test data and making sure that our functions do the right thing.
+These tests are incomplete and it is our job today to complete them.
 
  - Inspect the tests on the page and try to understand what's going on in general.
  - All the **tests** are currently **failing**.

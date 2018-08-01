@@ -73,46 +73,21 @@ for (var i = 1; i <= 100; i++){
 
 // Create a function to define binding size
 
-// function chesssBoard(height, width){
-//   var chess = ' ';
-//   for (var x = 0; x < width - 1; x++) {
-//     if (chess.charAt(x) === ' '){
-//       chess = chess + '#';
-//     } else if (chess.length === width) {
-//       console.log('\n');
-//     } else {
-//       chess = chess + ' ';
-//     } 
-//   } console.log(chess);
-//   for (var y = 0; y < height - 1; y++){
-//         console.log(chess);
-//     }
-// }
-
-
-function chessBoard(height, width) {
-  var chess = ' ';
-  for (var y = 0; y < height; y++) {
-    for (var x = 0; x < (width); x++) {
-      //if previous character is space, add hashtag
-      if (chess.charAt(chess.length - 1) === ' ') {
-          chess += '#';
+var chess = '';
+function board(height, width) {
+  // loops to create height
+  for (var i = 0; i < height; i++) {
+      
+    // loops for width
+    for (var x = 0; x < width; x++) // this loop and if/else is all w/in first loop {}
+    // for each new i loop, x loops width amount of times creating string line
+    if ((i + x) % 2 === 0) {
+        chess += ' ';
+      } else {
+        chess += '#';
       }
-      //if previous character is hashtag, add space
-      else if (chess.charAt(chess.length - 1) === "#") {
-           chess += " ";
-      }
-      //if previous character is newline, and before that is space, add space
-      else if (chess.charAt(chess.length - 1) === "\n" && chess.charAt(chess.length - 2) === " " ) {
-        chess += " ";
-        } else {
-          chess += "#";
-        }
-    }
-    if (y === 0){
-      chess = chess.slice(0, chess.length - 1);
-    }
-    chess += "\n";
+    chess += '\n';
   }
+  // slice removes the last '\n'
   console.log(chess.slice(0, chess.length - 1));
 }
